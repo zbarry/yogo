@@ -131,6 +131,7 @@ class Trainer:
                 is_rgb=self.config["rgb"],
                 num_classes=len(self.config["class_names"]),
                 model_func=get_model_func(self.config["model"]),
+                normalize_images=self.config['normalize_images'],
             ).to(self.device)
             self.global_step = 0
         else:
